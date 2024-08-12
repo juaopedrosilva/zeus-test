@@ -1,0 +1,54 @@
+{
+  "root": true,
+  "env": { "browser": true, "es6": true },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "plugin:import/warnings",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "files": ["**/*.ts", "syncEnv.ts"],
+  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module",  "project": ["./tsconfig.json"] },
+  "plugins": [
+    "react-refresh",
+    "jsx-a11y",
+    "import",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "globals": {
+    "JSX":"readonly"
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "react-refresh/only-export-components": "warn",
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "labelComponents": [],
+        "labelAttributes": [],
+        "controlComponents": [],
+        "assert": "either",
+        "depth": 25
+      }
+    ]
+  }
+}
